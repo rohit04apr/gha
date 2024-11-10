@@ -10,4 +10,4 @@ jobs:
         run: echo Hello, world!
       - name: Printing Goodbye
         run: |
-          echo ${{ STATE }}
+          echo ${{ vars.STATE }}
