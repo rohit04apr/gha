@@ -5,9 +5,10 @@ on: workflow_dispatch
 jobs:
   first-job:
     runs-on: ubuntu-latest
+    environment: tg-gha
     steps:
       - name: Printing Greatings
         run: echo Hello, world!
-      - name: Printing Goodbye
+      - name: Printing Variables
         run: |
-          echo ${{ vars.STATE }}
+          echo ${{ vars.STATE2 }}
