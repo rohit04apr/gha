@@ -1,5 +1,16 @@
 name: First Workflow
-on: workflow_dispatch
+workflow_dispatch:
+  inputs:
+    logLevel:
+      description: 'Log level'
+      required: true
+      default: 'information'
+      type: choice
+      options:
+        - information
+        - debug
+        - warning
+        - critical
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
