@@ -25,4 +25,4 @@ jobs:
         run: |
           echo ${{ vars.STATE2 }}
       - name: Print the logLevel of run
-        run: echo logLevel: ${{ inputs.logLevel }}
+        run: ${{ inputs.logLevel }}
