@@ -24,3 +24,5 @@ jobs:
       - name: Printing Variables
         run: |
           echo ${{ vars.STATE2 }}
+      - name: Print the logLevel of run
+        run: echo logLevel: ${{ inputs.logLevel }}
