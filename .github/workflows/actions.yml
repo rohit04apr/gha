@@ -12,6 +12,16 @@ on:
           - debug
           - warning
           - critical
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
+          - stg
+          - prod
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,3 +36,5 @@ jobs:
           echo ${{ vars.STATE2 }}
       - name: Print the logLevel of run
         run: echo ${{ inputs.logLevel }}
+      - name: Print the environment of run
+        run: echo ${{ inputs.environment }}
